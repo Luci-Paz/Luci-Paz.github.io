@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
    } //end sendText();
    
 
-  function speakText(message) {
+  function speakText(message) { //function responsible for text to speech conversion
 	const text = message.trim();
     if (text !== '') {
       // Create a new SpeechSynthesisUtterance instance
@@ -191,7 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const API_KEY = 'AIzaSyBwLho0PLjPM7r9ugbjPpHqUGohNKMAgJs'; // Replace with your actual API key. DO NOT SHARE OR REVEAL IN PUBLCI CODE!
 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
-
+// function that get's initial response from gemini 2.0 api. the Api is given a counselor persona and is
+//provided guidance on how to answer questions
 async function getGeminiResponse(message) {
     const conciseMessage = `You are a helpful assistant that answers the user's input as an advisor for the University of Maryland, Baltimore County, located at 1000 Hilltop Circle, Catonsville, Maryland, 21250, United States. 
     You will be addressed as Grit in the user promt and your response should imitate a counseling conversation and should provide useful insight. Also ensure that your responses are concise, appropriate to UMBC, 
@@ -224,7 +225,10 @@ async function getGeminiResponse(message) {
     }
 }
 
-
+//function that summarizes text without including urls or markdowns. 
+//This function will be used to summarize the response from the getGeminiResponse function
+// The response of this 
+//function is what will actually be fed to the text to speech function
 async function getGeminiResponseSummary(message) {
 		const consiceMessage = `You are a helpful assistant that summarizes inputs in the tone of an advisor for the University of Maryland, Baltimore County. You will give a brief response and avoid 
 		saying the urls of websites and any markdown markings such as asterisks or heading signs. Please include the main and relevant information in your responses: ${message}`;
