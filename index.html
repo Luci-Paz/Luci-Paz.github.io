@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retriever Guide</title>
+  <title>Retriever Guide - UMBC</title>
   <link rel="stylesheet" href="style.css">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,16 +13,18 @@
 <body>
   
 	<header>
-		<h1>Retriever Guide</h1>
-		<p>Powered by Google Gemini.</p>
+		<img src="images/logo/UMBC-Primary-On-Black.png" alt="UMBC Logo" height="79.25px" width="344px">
+		<h1>RetrieverGuide*</h1>
+		<p>Powered by Google Gemini 2.0 Flash</p>
 	</header>
 	
-	<!--container makes a stack of all elements-->
+	<!-- container makes a stack of all elements -->
+	<br>
 	<div class="container">
 		
-		<!--Make the langauge drop down menu-->
+		<!-- Make the langauge drop down menu -->
 		<div class="language-select">
-		  <label for="language">Select Language:</label>
+		  <label for="language">Select Audio Language:</label>
 		  <select id="language">
 			<option value="en-US">English (US)</option>
 			<option value="en-GB">English (UK)</option>
@@ -38,12 +40,12 @@
 		  </select>
 		</div>
 		
-		<!--Error message if browser cannot be used-->
+		<!-- Error message if browser cannot be used -->
 		<div id="errorMessage">
 			Speech recognition is not supported in your browser. Try using Chrome or Edge.
 		</div>
 		
-		<!--Welcome Screen-->
+		<!-- Welcome Screen -->
 		<main>
 			<div id="welcome-screen">
 				<img src=".\images\logo\UMBC-Primary-Tagline.png" alt="UMBC Logo">
@@ -61,14 +63,14 @@
 		</main>
 	</div>
 	
-	<!--Footer-->
+	<!-- Footer -->
 	<footer>
 		<p>&copy; 2025 Abdu, Yinka, Lucian, Alex</p>
         <p>For educational purposes only. AI can make mistakes, double check important info.</p>
         <p></p>
 	</footer>
   
-  <!--Scripts-->
+  <!-- Scripts -->
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>

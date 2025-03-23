@@ -7,11 +7,35 @@ body {
   color: #000;
 }
 
+/*
 header {
     background-color: #000;
     color: #FFCD00;
     text-align: center;
     padding: 1em 0;
+}
+*/
+
+header {
+  width: 100%; /* Ensure header spans the entire width */
+  height: 300px; /* Adjust height as needed */
+  background-image: url('images/banner/maryland-flag-backgrounds-landscape-black.jpg'); /* Replace with your PNG file path */
+  background-size: cover; /* Scale the image to cover the entire header */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-position: center; /* Center the image */
+  color: #FFCD00; /* Set text color for readability */
+  text-align: center; /* Center text within the header */
+  display: flex; /* Use flexbox for vertical centering */
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+}
+
+hr {
+  height: 5px;
+  color:#FFCD00;
+  background-color:#FFCD00;
+  border: none;
 }
 
 footer {
@@ -26,6 +50,21 @@ footer {
 
 main {
     padding: 20px;
+}
+
+@font-face {
+  font-family: 'Inter'; /* Replace with your desired font name */
+  src: url('fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('tff'), /* Replace with your font file and format */
+       url('fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf') format('tff'); /* Optional: Add other formats for broader support */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+p, a, button, label {
+    font-family: 'Inter', sans-serif;
 }
 
 /* Welcome Screen Styles */
@@ -53,18 +92,15 @@ main {
 
 #chat-window {
     border: 1px solid #ccc;
-    height: 400px;
+    height: 300px;
     overflow-y: scroll;
     padding: 10px;
-	margin-bottom: 10px;
-	border-radius: 15px;
 }
 
 #send-button, #clear-chat, #record-button {
     background-color: #000;
     color: #FFCD00;
     padding: 10px 20px;
-	font-size: 16px;
     border: none;
     cursor: pointer;
     margin-top: 10px;
@@ -83,6 +119,21 @@ main {
   align-items: center;
 }
 
+.controls {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 button:hover {
   background-color: #3367d6;
@@ -93,13 +144,18 @@ button:disabled {
   cursor: not-allowed;
 }
 
+#status {
+  margin: 10px 0;
+  font-style: italic;
+  color: #666;
+}
 
 #result {
-  width: 98%;
-  min-height: 50px;
+  width: 100%;
+  min-height: 100px;
   border: 1px solid #ccc;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 4px;
   margin-bottom: 20px;
 }
 
